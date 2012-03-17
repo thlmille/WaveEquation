@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Numerical Solutions to the Wave Equation in One Dimension}
+\author{Thomas Miller}
+\maketitle
+
+The one dimensional wave equation models the movements of waves on a vibrating string. The partial differential equation
+relates the second derivative of a function $u(x,t)$ with respect to time to the second derivative
+of that same function with respect to position.
+\[ \frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2} \]
+Where $c$ is the speed at which the waves travel along the string.
+
+The wave equation can be solved by hand if the given boundary and initial conditions are easy to work
+with functions as are usually found in any partial differential equations textbook. In real life applications though, functions are not always pretty, which is where numerical methods come into play. These allow us to estimate a solution to the wave equation for almost any given set of boundary and initial conditions.
+
+To solve the wave equation numerically, I used a finite difference method, which can actually be used to solve a variety of differential equations. The above equation becomes:
+\[\frac{u_{j}^{(m+1)} - 2u_{j}^{(m)} + u_{j}^{(m-1)}}{(\Delta t)^2} = 
+c^2\frac{u_{j+1}^{(m)} - 2u_{j}^{(m)} + u_{j-1}^{(m)}}{(\Delta x)^2} \]
+Where $j$ is the position index, $m$ is the time index, $\Delta t$ is amount we are stepping forward
+in time each iteration and $\Delta x$ is how far we war stepping forward in position. Solving for $u_{j}^{(m+1)}$ we get
+
+\end{document}
